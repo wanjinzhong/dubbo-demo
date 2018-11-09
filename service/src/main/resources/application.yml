@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: service1
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test?useSSL=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+dubbo:
+  registry:
+    id: registry-1
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    port: 9090
+    name: dubbo
+    id: dubbo
+    status: server
+  application:
+    name: service_name1
+    id: service_id1
+  scan:
+    base-packages: com.neil.service.service

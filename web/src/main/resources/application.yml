@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+dubbo:
+  registry:
+    id: registry-1
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  application:
+    id: web_id1
+    name: web_name1
